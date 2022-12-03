@@ -4,7 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>Frontend Mentor | Loopstudios landing page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,126 +22,175 @@
   </style>
 </head>
 <body>
-  <main>
-    <header class="bg-[url('./images/mobile/image-hero.jpg')] md:bg-[url('./images/desktop/image-hero.jpg')] w-full px-8 pt-14 pb-16 lg:px-36 text-white bg-cover md:h-max bg-no-repeat ">
-      <nav class="flex justify-between">
-        <img class="w-32 sm:w-min" src="./images/logo.svg" alt="logo">
-        <img class="md:hidden h-min w-min openBtn" src="./images/icon-hamburger.svg" alt="hamburger" onclick="openNav()">
-        <div class="overlay hidden fixed overflow-y-hidden pt-12 w-full h-full top-0 left-0 bg-black p-8">
-          <div class="logo_and_close flex w-100 justify-between">
-            <img class="w-32 sm:w-min" src="./images/logo.svg" alt="logo">
-            <img class="h-min w-min closeBtn" src="./images/icon-close.svg" alt="close" onclick="closeNav()">
+  <main class="w-full h-full">
+    <header class="w-full bg-[url('./images/mobile/image-hero.jpg')] md:bg-[url('./images/desktop/image-hero.jpg')] bg-cover bg-center md:bg-no-repeat px-5 pt-8">
+      <div class="w-full max-w-[70.175rem] flex flex-col gap-40 mx-auto">
+        <div class="flex justify-between items-center">
+          <img class="" src="./images/logo.svg" alt="logo">
+          <img class="h-fit openBtn md:hidden" onclick="openNav()" src="./images/icon-hamburger.svg" alt="hamburger">
+          <nav class="hidden md:flex ">
+            <ul class="text-white font-[Alata] font-light text-center flex  gap-7">
+              <li class="cursor-pointer relative group">
+               <span>About</span> 
+               <span class="absolute -bottom-1 left-0 w-0 h-[0.1rem] bg-white transition-all duration-100 group-hover:w-full"></span>
+              </li>
+              <li class="cursor-pointer relative group">
+                <span>Carrers</span> 
+                <span class="absolute -bottom-1 left-0 w-0 h-[0.1rem] bg-white transition-all group-hover:w-full"></span>
+               </li>
+               <li class="cursor-pointer relative group">
+                <span>Events</span> 
+                <span class="absolute -bottom-1 left-0 w-0 h-[0.1rem] bg-white transition-all group-hover:w-full"></span>
+               </li>
+               <li class="cursor-pointer relative group">
+                <span>Products</span> 
+                <span class="absolute -bottom-1 left-0 w-0 h-[0.1rem] bg-white transition-all group-hover:w-full"></span>
+               </li>
+               <li class="cursor-pointer relative group">
+                <span>Support</span> 
+                <span class="absolute -bottom-1 left-0 w-0 h-[0.1rem] bg-white transition-all group-hover:w-full"></span>
+               </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="text-5xl max-w-[37.5rem] w-full sm:text-6xl md:text-7xl md:pl-6 text-white uppercase font-Alata font-light border-2 p-4 mb-40">
+          Immersive experiences that deliver
+        </div>
+        <div class="overlay bg-black fixed invisible top-0 left-0 w-0 h-full px-5 pt-8 z-30 transition-all duration-125">
+          <div class="flex justify-between items-center">
+            <img class="" src="./images/logo.svg" alt="logo">
+            <img class="h-fit closeBtn" onclick="closeNav()" src="./images/icon-close.svg" alt="close">
           </div>
-          <ul class="nav_links flex flex-col h-64 text-4xl mt-20 justify-between">
+          <ul class="text-white font-light uppercase text-3xl text-left flex flex-col gap-4 mt-32 ">
             <li>About</li>
-            <li>Careers</li>
+            <li>Carrers</li>
             <li>Events</li>
             <li>Products</li>
             <li>Support</li>
           </ul>
         </div>
-        <ul class="nav_links hidden md:flex justify-between w-96 md:normal">
-          <li>About</li>
-          <li>Careers</li>
-          <li>Events</li>
-          <li>Products</li>
-          <li>Support</li>
-        </ul>
-      </nav>
-      <h1 class="text-3xl pl-4 sm: sm:text-7xl font-light border xl:w-7/12 w-full md:w-min pr-8 py-5 sm:pl-10 md:pr-28 md:my-20 mb-72 mt-72 md:mt-36 uppercase" id="header_h1">Immersive experiences that deliver</h1>
+      </div>
+      
     </header>
-    <section class="leader_in_interactive_section flex flex-col md:flex-row md:justify-evenly xl:justify-between pt-24 pb-16 px-8 xl:px-40 relative">
-      <img class="w-full md:hidden block" src="./images/mobile/image-interactive.jpg" alt="interactive">
-      <img class="w-1/2 xl:w-min  hidden md:block " src="./images/desktop/image-interactive.jpg" alt="interactive">
-      <div class="right_text_div w-full text-center md:text-left mt-16 md:w-2/5 xl:absolute bg-white xl:bottom-0 xl:left-1/2 xl:transform xl:-translate-x-4 xl:-translate-y-16 xl:pl-20 xl:pt-20">
-        <h1 class="text-3xl md:text-5xl font-light uppercase" id="first_section_h1">The leader in interactive VR</h1>
-        <p class="first_section_text mt-10">Founded in 2011, Loopstudios has been producing world-class virtual reality 
+    <section class="the-leader-in md:my-20 mt-32 relative w-full max-w-[70.175rem] mx-auto">
+      <img class="h-full w-full px-5 md:hidden" src="./images/mobile/image-interactive.jpg" alt="interactive">
+      <img class="h-full px-5 hidden md:flex" src="./images/desktop/image-interactive.jpg" alt="interactive">
+      <div class="text-center flex flex-col items-center md:items-baseline gap-4 md:gap-9 mt-8 px-4 md:p-0 md:absolute md:top-48 md:py-14 md:pl-20 md:right-0 bg-white md:text-left">
+        <div class="text-4xl md:text-5xl uppercase font-light max-w-lg">The leader in interactive VR</div>
+        <div class="px-6 md:p-0 font-[Alata] max-w-lg md:pr-6 text-gray-500">Founded in 2011, Loopstudios has been producing world-class virtual reality 
           projects for some of the best companies around the globe. Our award-winning 
           creations have transformed businesses through digital experiences that bind 
-          to their brand.</p>
+          to their brand.</div>
       </div>
     </section>
-    <section class="grid_section md:pt-24 pb-16 px-8 xl:px-40">
-      <div class="h1_and_button flex justify-center md:justify-between">
-        <h1 class="text-3xl text-center sm:text-left md:text-5xl font-light uppercase" id="second_section_h1">Our creations</h1>
-        <button class="border hidden md:block border-black px-12 duration-200 uppercase hover:bg-black hover:text-white" id="see_all_btn">See all</button>
+    <section class="our-creations mb-32 mt-5">
+      <div class="w-full max-w-[70.175rem] mx-auto">
+        <div class="flex justify-center items-center md:justify-between px-4 md:my-16 md:mt-44">
+          <div class="text-4xl uppercase font-light text-center mt-20 mb-10 md:m-0">Our creations</div>
+          <div class="hidden md:flex justify-center mt-10 md:m-0">
+            <button class="text-center text-lg uppercase font-[Alata] tracking-[0.4rem] border border-black px-8 py-2 cursor-pointer hover:text-white hover:bg-black transition delay-[25] ease-in-out">see all</button>
+          </div>
+        </div>
+        <div class="grid grid-col-1 md:grid-cols-4 gap-4 px-4">
+          <div class="relative group cursor-pointer ">
+            <img class="w-full md:hidden" src="./images/mobile/image-deep-earth.jpg" alt="earth">
+            <img class="w-full hidden md:flex group-hover:opacity-40 group-hover:scale-105 group-hover:brightness-100 transition delay-75 ease-in-out" src="./images/desktop/image-deep-earth.jpg" alt="earth">
+            <div class="uppercase text-3xl absolute bottom-3 left-5 text-white font-light w-40 group-hover:text-black group-hover:scale-110 transition delay-75 ease-in-out">deep earth</div>
+          </div>
+          <div class="relative group cursor-pointer ">
+            <img class="brightness-50 w-full md:hidden" src="./images/mobile/image-night-arcade.jpg" alt="night">
+            <img class="brightness-50 w-full hidden md:flex group-hover:opacity-40 group-hover:scale-105 group-hover:brightness-100 transition delay-75 ease-in-out" src="./images/desktop/image-night-arcade.jpg" alt="earth">
+            <div class="uppercase text-3xl absolute bottom-3 left-5 text-white font-light w-40 group-hover:text-black group-hover:scale-110 transition delay-75 ease-in-out">night arcade</div>
+          </div>
+          <div class="relative group cursor-pointer">
+            <img class="brightness-50 w-full md:hidden" src="./images/mobile/image-soccer-team.jpg" alt="soccer">
+            <img class="brightness-50 w-full hidden md:flex group-hover:opacity-40 group-hover:scale-105 group-hover:brightness-100 transition delay-75 ease-in-out" src="./images/desktop/image-soccer-team.jpg" alt="earth">
+            <div class="uppercase text-3xl absolute bottom-3 left-5 text-white font-light w-40 group-hover:text-black group-hover:scale-105 transition delay-75 ease-in-out">soccer team vr</div>
+          </div>
+          <div class="relative group cursor-pointer">
+            <img class="brightness-50 w-full md:hidden" src="./images/mobile/image-grid.jpg" alt="grid">
+            <img class="brightness-50 w-full hidden md:flex group-hover:opacity-40 group-hover:scale-105 group-hover:brightness-100 transition delay-75 ease-in-out" src="./images/desktop/image-grid.jpg" alt="earth">
+            <div class="uppercase text-3xl absolute bottom-3 left-5 text-white font-light w-28 group-hover:text-black group-hover:scale-105 transition delay-75 ease-in-out">the grid</div>
+          </div>
+          <div class="relative group cursor-pointer">
+            <img class="brightness-50 w-full md:hidden" src="./images/mobile/image-from-above.jpg" alt="above">
+            <img class="brightness-50 w-full hidden md:flex group-hover:opacity-40 group-hover:scale-105 group-hover:brightness-100 transition delay-75 ease-in-out" src="./images/desktop/image-from-above.jpg" alt="earth">
+            <div class="uppercase text-3xl absolute bottom-3 left-5 text-white font-light w-40 group-hover:text-black group-hover:scale-105 transition delay-75 ease-in-out">from up above vr</div>
+          </div>
+          <div class="relative group cursor-pointer">
+            <img class="brightness-50 w-full md:hidden" src="./images/mobile/image-pocket-borealis.jpg" alt="pocket">
+            <img class="brightness-50 w-full hidden md:flex group-hover:opacity-40 group-hover:scale-105 group-hover:brightness-100 transition delay-75 ease-in-out" src="./images/desktop/image-pocket-borealis.jpg" alt="earth">
+            <div class="uppercase text-3xl absolute bottom-3 left-5 text-white font-light w-40 group-hover:text-black group-hover:scale-105 transition delay-75 ease-in-out">pocket borealis</div>
+          </div>
+          <div class="relative group cursor-pointer">
+            <img class="brightness-50 w-full md:hidden" src="./images/mobile/image-curiosity.jpg" alt="curiosity">
+            <img class="brightness-50 w-full hidden md:flex group-hover:opacity-40 group-hover:scale-105 group-hover:brightness-100 transition delay-75 ease-in-out" src="./images/desktop/image-curiosity.jpg" alt="earth">
+            <div class="uppercase text-3xl absolute bottom-3 left-5 text-white font-light w-40 group-hover:text-black group-hover:scale-105 transition delay-75 ease-in-out">the curiosty</div>
+          </div>
+          <div class="relative group cursor-pointer">
+            <img class="brightness-50 w-full md:hidden" src="./images/mobile/image-fisheye.jpg" alt="fisheye">
+            <img class="brightness-50 w-full hidden md:flex group-hover:opacity-40 group-hover:scale-105 group-hover:brightness-100 transition delay-75 ease-in-out" src="./images/desktop/image-fisheye.jpg" alt="earth">
+            <div class="uppercase text-3xl absolute bottom-3 left-5 text-white font-light w-40 group-hover:text-black group-hover:scale-105 transition delay-75 ease-in-out">make it fisheye</div>
+          </div>
+        </div>
+        <div class="flex md:hidden justify-center mt-10">
+          <button class="text-center text-lg uppercase font-[Alata] tracking-[0.4rem] border border-black px-8 py-2 cursor-pointer hover:text-white hover:bg-black transition delay-[25] ease-in-out">see all</button>
+        </div>
       </div>
-      <!-- grid -->
-      <div class="flex flex-col md:grid md:grid-cols-4 md:gap-4 md:gap-y-8 mt-12 md:mt-20 text-white">
-        <div class="image_and_text group relative cursor-pointer">
-          <img class="md:hidden w-full" src="./images/mobile/image-deep-earth.jpg" alt="earth">
-          <img class="hidden md:w-full md:block duration-200 group-hover:scale-95 group-hover:opacity-60" src="./images/desktop/image-deep-earth.jpg" alt="earth">
-          <h1 class="text text-xl duration-200 group-hover:text-black group-hover:scale-95 md:text-2xl 2xl:text-4xl font-light uppercase absolute absolute bottom-4 left-4 2xl:bottom-8 xl:left-12 sm:w-1/3">Deep Earth</h1>
-        </div>
-        <div class="image_and_text group relative cursor-pointer">
-          <img class="md:hidden w-full mt-8" src="./images/mobile/image-night-arcade.jpg" alt="earth">
-          <img class="hidden md:w-full md:block duration-200 group-hover:scale-95 group-hover:opacity-60" src="./images/desktop/image-night-arcade.jpg" alt="arcade">
-          <h1 class="text text-xl duration-200 group-hover:text-black group-hover:scale-95 md:text-2xl 2xl:text-4xl font-light uppercase absolute absolute bottom-4 left-4 xl:bottom-8 xl:left-12 sm:w-1/3">Night arcade</h1>
-        </div>
-        <div class="image_and_text group relative cursor-pointer">
-          <img class="md:hidden w-full mt-8" src="./images/mobile/image-soccer-team.jpg" alt="earth">
-          <img class="hidden md:w-full md:block duration-200 group-hover:scale-95 group-hover:opacity-60" src="./images/desktop/image-soccer-team.jpg" alt="team">
-          <h1 class="text text-xl duration-200 group-hover:text-black group-hover:scale-95 md:text-2xl 2xl:text-4xl font-light uppercase absolute absolute bottom-4 left-4 xl:bottom-8 xl:left-12 sm:w-2/3">Soccer team VR</h1>
-        </div>
-        <div class="image_and_text group relative cursor-pointer">
-          <img class="md:hidden w-full mt-8" src="./images/mobile/image-grid.jpg" alt="earth">
-          <img class="hidden md:w-full md:block duration-200 group-hover:scale-95 group-hover:opacity-60" src="./images/desktop/image-grid.jpg" alt="grid">
-          <h1 class="text text-xl duration-200 group-hover:text-black group-hover:scale-95 md:text-2xl 2xl:text-4xl font-light uppercase absolute absolute bottom-4 left-4 xl:bottom-8 xl:left-12 sm:w-1/3">The grid</h1>
-        </div>
-        <div class="image_and_text group relative cursor-pointer">
-          <img class="md:hidden w-full mt-8" src="./images/mobile/image-from-above.jpg" alt="earth">
-          <img class="hidden md:w-full md:block duration-200 group-hover:scale-95 group-hover:opacity-60" src="./images/desktop/image-from-above.jpg" alt="above">
-          <h1 class="text text-xl duration-200 group-hover:text-black group-hover:scale-95 md:text-2xl 2xl:text-4xl font-light uppercase absolute absolute bottom-4 left-4 xl:bottom-8 xl:left-12 sm:w-2/3">From up above VR</h1>
-        </div>
-        <div class="image_and_text group relative cursor-pointer">
-          <img class="md:hidden w-full mt-8" src="./images/mobile/image-pocket-borealis.jpg" alt="earth">
-          <img class="hidden md:w-full md:block duration-200 group-hover:scale-95 group-hover:opacity-60" src="./images/desktop/image-pocket-borealis.jpg" alt="borealis">
-          <h1 class="text text-xl duration-200 group-hover:text-black group-hover:scale-95 md:text-2xl 2xl:text-4xl font-light uppercase absolute absolute bottom-4 left-4 xl:bottom-8 xl:left-12 sm:w-1/3">Pocket borealis</h1>
-        </div>
-        <div class="image_and_text group relative cursor-pointer">
-          <img class="md:hidden w-full mt-8" src="./images/mobile/image-curiosity.jpg" alt="earth">
-          <img class="hidden md:w-full md:block duration-200 group-hover:scale-95 group-hover:opacity-60" src="./images/desktop/image-curiosity.jpg" alt="curiosity">
-          <h1 class="text text-xl duration-200 group-hover:text-black group-hover:scale-95 md:text-2xl 2xl:text-4xl font-light uppercase absolute absolute bottom-4 left-4 xl:bottom-8 xl:left-12 sm:w-1/3">The curiosity</h1>
-        </div>
-        <div class="image_and_text group relative cursor-pointer">
-          <img class="md:hidden w-full mt-8" src="./images/mobile/image-fisheye.jpg" alt="earth">
-          <img class="hidden md:w-full md:block duration-200 group-hover:scale-95 group-hover:opacity-60" src="./images/desktop/image-fisheye.jpg" alt="fisheye">
-          <h1 class="text text-xl duration-200 group-hover:text-black group-hover:scale-95 md:text-2xl 2xl:text-4xl font-light uppercase absolute absolute bottom-4 left-4 xl:bottom-8 xl:left-12 sm:w-2/3">Make it fisheye</h1>
-        </div>
-      </div>
-      <div class="h1_and_button flex justify-center mt-12">
-        <button class="border md:hidden h-16 border-black px-12 uppercase hover:bg-black hover:text-white" id="see_all_btn">See all</button>
-      </div>
+
+      
     </section>
-    <footer class="bg-black text-white mt-20 pt-16 pb-16 px-8 xl:px-40 flex flex-col items-center md:flex-row justify-between">
-      <div class="links_and_rights flex flex-col items-center md:items-start">
-        <img class="w-1/2 mb-4 " src="./images/logo.svg" alt="logo">
-        <ul class="footer_links flex flex-col md:flex-row items-center md:items-start md:justify-between w-80 xl:w-96 mb-8 md:mb-0">
-          <li class="pb-2">About</li>
-          <li class="pb-2">Careers</li>
-          <li class="pb-2">Events</li>
-          <li class="pb-2">Products</li>
-          <li class="pb-2">Support</li>
-        </ul>
-      </div>
-      <div class="logo_and_logos flex flex-col justify-between">
-        <div class="logos flex justify-center md:justify-end w-80 ">
-          <ul class="logos flex justify-between w-36 self-center mb-2 ">
-            <li><img class="pb-2" src="./images/icon-facebook.svg" alt="facebook" class="logos" id="facebook"></li>
-            <li><img class="pb-2" src="./images/icon-twitter.svg" alt="twitter" class="logos" id="twitter"></li>
-            <li><img class="pb-2" src="./images/icon-pinterest.svg" alt="pinterest" class="logos" id="pinterest"></li>
-            <li><img class="pb-2" src="./images/icon-instagram.svg" alt="instagram" class="logos" id="instagram"></li>
+    <footer class="bg-black">
+      <div class="md:flex md:items-center px-4 md:justify-between w-full max-w-[70.175rem] mx-auto">
+        <div class="flex flex-col items-center md:items-start gap-6 md:my-10">
+          <img class="w-full max-w-[10rem] mt-10 md:m-0" src="./images/logo.svg" alt="logo">
+          <ul class="text-white text-center flex flex-col gap-4 mb-11 mt-4 md:m-0 font-[Alata] md:flex-row">
+            <li class="cursor-pointer relative group">
+              <span>About</span> 
+              <span class="absolute -bottom-1 left-0 w-0 h-[0.15rem] bg-white transition-all group-hover:w-full"></span>
+            </li>
+            <li class="cursor-pointer relative group">
+               <span>Carrers</span> 
+               <span class="absolute -bottom-1 left-0 w-0 h-[0.15rem] bg-white transition-all group-hover:w-full"></span>
+            </li>
+            <li class="cursor-pointer relative group">
+               <span>Events</span> 
+               <span class="absolute -bottom-1 left-0 w-0 h-[0.15rem] bg-white transition-all group-hover:w-full"></span>
+            </li>
+            <li class="cursor-pointer relative group">
+               <span>Products</span> 
+               <span class="absolute -bottom-1 left-0 w-0 h-[0.15rem] bg-white transition-all group-hover:w-full"></span>
+            </li>
+            <li class="cursor-pointer relative group">
+               <span>Support</span> 
+               <span class="absolute -bottom-1 left-0 w-0 h-[0.15rem] bg-white transition-all group-hover:w-full"></span>
+            </li>
           </ul>
         </div>
-        <p class="text-center text-sm sm:text-md md:text-right" id="rights">© 2021 Loopstudios. All rights reserved.</p>
+        <div class="flex flex-col items-center gap-6 md:items-end text-gray-400">
+          <ul class="flex gap-3 items-center">
+            <li class="cursor-pointer relative group">
+              <img src="./images/icon-facebook.svg" alt="facebook">
+              <span class="absolute -bottom-2 left-0 w-0 h-[0.1rem] bg-white transition-all group-hover:w-full"></span>
+             </li>
+             <li class="cursor-pointer relative group">
+              <img src="./images/icon-twitter.svg" alt="twitter">
+               <span class="absolute -bottom-2 left-0 w-0 h-[0.1rem] bg-white transition-all group-hover:w-full"></span>
+              </li>
+              <li class="cursor-pointer relative group">
+                <img src="./images/icon-pinterest.svg" alt="pinterest">
+               <span class="absolute -bottom-2 left-0 w-0 h-[0.1rem] bg-white transition-all group-hover:w-full"></span>
+              </li>
+              <li class="cursor-pointer relative group">
+                <img src="./images/icon-instagram.svg" alt="instagram"> 
+               <span class="absolute -bottom-2 left-0 w-0 h-[0.1rem] bg-white transition-all group-hover:w-full"></span>
+              </li>
+          </ul>
+          <div class="mb-14 md:m-0">© 2021 Loopstudios. All rights reserved.</div>
+        </div>
       </div>
     </footer>
   </main>
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
   <script src="script.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>
